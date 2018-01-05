@@ -178,7 +178,8 @@
             context: option,
             url: option.form.action,
             data: serialiseFormData(option.dataType, $(option.form)),
-            contentType: contentType(option.dataType)
+            contentType: contentType(option.dataType),
+            processData: false
         }, option.ajax);
 
         $.ajax(settings);
@@ -201,8 +202,11 @@
 
                 return JSON.stringify(json);
 
+            case 'formdata':
+                return window.FormData ? new FormData($form[0]) : $form.serialize();
+
             default:
-                return new FormData($form[0]);
+                return $form.serialize();
         }
     }
 
@@ -215,8 +219,12 @@
         switch (dataType.toLowerCase()) {
             case 'json':
                 return 'application/json';
-            default:
+
+            case 'formdata':
                 return false;
+
+            default:
+                return 'application/x-www-form-urlencoded';
         }
     }
 
