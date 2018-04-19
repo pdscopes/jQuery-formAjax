@@ -134,9 +134,6 @@
                         continue;
                     }
                     var input = findElementByName($(options.form), el);
-                    if (!input) {
-                        continue;
-                    }
                     if (options.displayError) {
                         options.displayError(input, data.errors[el]);
                     } else {
@@ -156,6 +153,10 @@
      * @see callbackDisplayError
      */
     $.fn.formAjax.displayError = function(input, errors) {
+        // Do nothing if the input was not found
+        if (!input) {
+            return;
+        }
         errors = Array.isArray(errors)
             ? errors
             : Object.keys(errors).map(function (key) { return errors[key]; });
