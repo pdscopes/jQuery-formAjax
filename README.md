@@ -30,7 +30,7 @@ $.fn.formAjax.defaults.ajax.beforeSend = function () {
   }
 };
 // Alter the displayError function to show the errors in the error-container
-$.fn.formAjax.displayError = function(input, errors) {
+$.fn.formAjax.defaults.displayError = function(input, errors) {
   let $errorContainer = $('.error-container'),
       $errors = $('.errors');
   $errorContainer.show();
