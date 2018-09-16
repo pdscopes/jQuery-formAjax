@@ -72,7 +72,7 @@
 
             switch (options.action) {
                 case 'bind':
-                    $(this).on('submit', function (e) {
+                    $(this).off('submit.formajax').on('submit.formajax', function (e) {
                         e.preventDefault();
                         submit(options);
                         return false;
