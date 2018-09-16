@@ -1,0 +1,27 @@
+{
+  "name": "jquery-formajax",
+  "version": "1.0.0",
+  "description": "Convert a form to an AJAX request",
+  "main": "jquery.formajax.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdscopes/jQuery-formAjax.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "jquery",
+    "plugin",
+    "form",
+    "ajax"
+  ],
+  "author": "Peter Scopes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pdscopes/jQuery-formAjax/issues"
+  },
+  "homepage": "https://github.com/pdscopes/jQuery-formAjax#readme"
+}
