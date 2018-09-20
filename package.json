@@ -1,6 +1,6 @@
 {
   "name": "jquery-formajax",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Convert a form to an AJAX request",
   "main": "jquery.formajax.js",
   "scripts": {
